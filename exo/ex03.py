@@ -5,11 +5,11 @@ def anagrams(str1, str2):
     length2 = len(str2)
 
     if length1 != length2:
-        return 0
+        return False
     else:
         str1 = sorted(str1)
         str2 = sorted(str2)
         for i in range(0, length1):
             if str1[i] != str2[i]:
-                return 0
-        return 1
+                return False
+        return True
